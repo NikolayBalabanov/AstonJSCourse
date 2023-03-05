@@ -1,0 +1,416 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 500px;
+  background-color: cadetblue;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  word-wrap: break-word;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0px 15px;
+  max-width: 1370px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn {
+  padding: 3px 12px;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  background-color: blueviolet;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+.btn:focus-visible {
+  border: 1px solid orangered;
+}
+
+.btn:hover {
+  color: blueviolet;
+  background-color: white
+}
+
+.btn:active {
+  color: blueviolet;
+  background-color: orangered;
+}
+
+.btn:disabled {
+  color: white;
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+
+.garage {
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.garage.is-hidden {
+  display: none;
+}
+
+.garage__controls {
+  align-self: center;
+}
+
+.garage__info {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.garage__cnt {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.garage__cnt:first-child {
+  margin-right: 20px;
+}
+
+.garage__list {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.garage__btn {
+  padding: 3px 12px;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  background-color: blueviolet;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.garage__btn:focus-visible {
+  border: 1px solid orangered;
+}
+
+.garage__btn:hover {
+  color: blueviolet;
+  background-color: white
+}
+
+.garage__btn:active {
+  color: blueviolet;
+  background-color: orangered;
+}
+
+.garage__btn:disabled {
+  color: white;
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.controls__wrap:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.controls__content {
+  display: flex;
+  align-items: center;
+}
+
+.controls__create {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.controls__types {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls__list {
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+
+.controls__list > label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.controls__list > label > input {
+  margin-right: 8px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.controls__race > * {
+  margin-bottom: 15px;
+}
+
+.controls__title {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.controls__input-text {
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  min-width: 300px;
+  border: 1px solid blueviolet;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.controls__color {
+  margin-bottom: 15px;
+  min-height: 36px;
+}
+
+.car-stats {
+  padding: 5px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border .3s ease-in-out;
+}
+
+.car-stats.picked {
+  border: 2px solid blue;
+  transition: border .3s ease-in-out;
+}
+
+.car-stats__title {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.car-stats__wrap > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.car-stats__wrap > li > span {
+  margin-right: 10px;
+}
+
+.btn--add {
+  margin-right: 5px;
+}
+
+.car {
+  display: flex;
+  flex-direction: column;
+
+}
+.car:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.car__change-btns {
+  display: flex;
+  align-items: center;
+}
+
+.car__select,
+.car__remove {
+  margin-right: 15px;
+}
+
+.car__name {
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.car__wrap {
+  display: flex;
+  border-bottom: 2px dashed black;
+}
+
+.car__engine-btns {
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.car__track {
+  padding-right: 70px;
+  display:  flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.car__track svg {
+  align-self: flex-end;
+  width: 80px;
+  height: 70px;
+}
+
+
+/* header */
+.header {
+  background-color: blueviolet;
+}
+
+.header__container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-size: 32px;
+  line-height: 100%;
+  color: black;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item:first-child {
+  margin-right: 25px;
+}
+
+.nav__btn {
+  padding: 12px 19px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-color: orangered;
+  transition:
+    border 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
+}
+
+.nav__btn:focus-visible {
+  border: 3px solid orange;
+}
+
+.nav__btn:hover {
+  background-color: orange;
+}
+
+.nav__btn:active {
+  background-color: goldenrod;
+}
+
+
+.modal {
+  position: fixed;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: transparent;
+  transition:
+    background-color 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+}
+
+.modal.is-shown {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.models {
+  margin-bottom: 25px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 20px;
+  border-radius: 20px;
+  border: 2px solid gray;
+  background-color: blueviolet;
+}
+
+.modal__btn {
+  padding: 10px 20px;
+  font-size: 24px;
+}
